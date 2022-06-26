@@ -126,6 +126,20 @@ ul li a{
 	margin-left: 120px;
 }
 
+@media screen and (max-width: 600px) {
+  #preguntas p {
+    position: relative;
+	font-size:1.1rem;
+	font-weight:normal;
+	color:black;
+	line-height: 1.5;
+	text-align: justify;
+	text-justify: inter-word;
+	margin-right: 30px;
+	margin-left: 30px;
+  }
+}
+
 .footer-container{
 	position: absolute;
 	height:auto;
