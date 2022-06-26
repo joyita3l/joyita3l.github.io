@@ -100,7 +100,20 @@ ul li a{
 	padding-top:20px;
 	padding-bottom:40px;
 }
-
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+.productos p{
+    position: relative;
+	font-size:1.1rem;
+	font-weight:normal;
+	color:black;
+	line-height: 1.5;
+	text-align: center;
+	text-justify: inter-word;
+	margin-right: 30px;
+	margin-left: 30px;
+  }
+}
 .productos-row:after {
 	content: "";
 	display: table;
