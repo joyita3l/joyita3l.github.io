@@ -118,7 +118,7 @@ ul li a{
 }
 
 @media screen and (max-width: 600px) {
-.historia p{
+.historia-text-container p{
 	font-size:1rem;
 	margin-right:20px;
 	margin-left:20px;
