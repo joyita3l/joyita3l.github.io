@@ -118,7 +118,7 @@ ul li a{
 }
 
 @media screen and (max-width: 600px) {
-#historia p{
+.historia p{
     position: relative;
 	font-size:1.1rem;
 	font-weight:normal;
@@ -183,7 +183,7 @@ ul li a{
 }
 
 @media screen and (max-width: 600px) {
-#equipo p{
+.equipo p{
     position: relative;
 	font-size:1.1rem;
 	font-weight:normal;
