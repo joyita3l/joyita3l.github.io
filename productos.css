@@ -198,6 +198,12 @@ ul li a{
   color: #fff;
 }
 
+@media screen and (max-width: 600px) {
+  .productos-col {
+    width: 100%;
+  }
+}
+
 .footer-container{
 	position: absolute;
 	height:auto;
