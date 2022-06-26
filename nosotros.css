@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+	min-height: 100%;
+}
+
+body {
+	min-height: 100vh;
+}
+
+nav{
+	position:fixed;
+	background: #ffffff;
+	height: 120px;
+	display:flex;
+	align-items: center;
+	font-size: 1.1rem;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
+.navbar-container{
+	display: flex;
+	align-items: center;
+	height: 80px;
+	z-index: 1;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 5px 8%;
+}
+
+.menu-img{
+	width:50px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.logo{
+	width:250px;
+	cursor: pointer;
+}
+
+ul{
+	flex: 1;
+	text-align: right;
+}
+
+ul li{
+	display: inline-block;
+	list-style: none;
+	margin: 0 20px;
+}
+
+ul li a{
+	text-decoration: none;
+	color: #000000;
+	
+}
+
+.historia.historia-container{
+	position: absolute;
+	height:100%;
+	width:100%;
+}
+
+.custom4-shape-divider-top-1637887047 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom4-shape-divider-top-1637887047 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 146px;
+}
+
+.custom4-shape-divider-top-1637887047 .shape-fill {
+    fill: #91DC3B;
+}
+
+
+.historia.historia-text-container{
+	position: absolute;
+	height:100%;
+}
+
+#historia h1{
+	text-align:center;
+	font-size:1.8rem;
+	font-weight:bold;
+	color:#11194D;
+}
+
+#historia p{
+	position: relative;
+	font-size:1.1rem;
+	font-weight:normal;
+	color:black;
+	line-height: 1.5;
+	text-align: justify;
+	text-justify: inter-word;
+	margin-right: 120px;
+	margin-left: 120px;
+}
+
+
+.equipo.equipo-container{
+	position: absolute;
+	height:100%;
+	width:100%;
+}
+
+.custom5-shape-divider-top-1637887047 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom5-shape-divider-top-1637887047 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 146px;
+}
+
+.custom5-shape-divider-top-1637887047 .shape-fill {
+    fill: #FF676D;
+}
+
+.equipo.equipo-text-container{
+	position: absolute;
+	height:100%;
+}
+
+#equipo h1{
+	text-align:center;
+	font-size:1.8rem;
+	font-weight:bold;
+	color:#11194D;
+}
+
+#equipo p{
+	position: relative;
+	font-size:1.1rem;
+	font-weight:normal;
+	color:black;
+	line-height: 1.5;
+	text-align: justify;
+	text-justify: inter-word;
+	margin-right: 120px;
+	margin-left: 120px;
+}
+
+.nuestro-equipo-text-container{
+	height:auto;
+	max-width: 100%;
+	width: 100%;
+	overflow: hidden;
+	padding: 20px 0;
+}
+.nuestro-equipo-text-container .main-card{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  transition: 1s;
+}
+#two:checked ~ .main-card{
+  margin-left: -100%;
+}
+.nuestro-equipo-text-container .main-card .cards{
+  width: calc(100% / 1 - 10px);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20px;
+  justify-content: space-between;
+}
+.main-card .cards .card{
+  width: calc(100% / 4 - 10px);
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+}
+.main-card .cards .card:hover{
+  transform: translateY(-15px);
+}
+.cards .card .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cards .card .content .img{
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  padding: 3px;
+  background: #FF676D;
+  margin-bottom: 14px;
+}
+.card .content .img img{
+  height: 100%;
+  width: 100%;
+  border: 3px solid #ffff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card .content .name{
+  font-size: 20px;
+  font-weight: 500;
+}
+.card .content .job{
+  font-size: 20px;
+  color: #FF676D;
+}
+
+.card .content .desc{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card .content .media-icons{
+  margin-top: 10px;
+  display: flex;
+
+}
+.media-icons a{
+  text-align: center;
+  line-height: 33px;
+  height: 35px;
+  width: 35px;
+  margin: 0 4px;
+  font-size: 24px;
+  color: #FFF;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  background: #FF676D;
+  transition: all 0.3s ease;
+}
+.media-icons a:hover{
+  color: #FF676D;
+  background-color: #fff;
+  border-color: #FF676D;
+}
+.nuestro-equipo-text-container.button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.button label{
+  height: 15px;
+  width: 15px;
+  border-radius: 20px;
+  background: #2b2929;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.button label.active{
+  width: 35px;
+}
+#one:checked ~ .button .one{
+  width: 35px;
+}
+#one:checked ~ .button .two{
+  width: 15px;
+}
+#two:checked ~ .button .one{
+  width: 15px;
+}
+#two:checked ~ .button .two{
+  width: 35px;
+}
+input[type="radio"]{
+  display: none;
+}
+@media (max-width: 768px) {
+  .main-card .cards .card{
+    margin: 20px 0 10px 0;
+    width: calc(100% / 2 - 10px);
+  }
+}
+@media (max-width: 600px) {
+  .main-card .cards .card{
+    /* margin: 20px 0 10px 0; */
+    width: 100%;
+  }
+}
+
+
+.footer-container{
+	position: absolute;
+	height:auto;
+	width:100%;
+}
+
+.custom6-shape-divider-top-1637887047 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom6-shape-divider-top-1637887047 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 146px;
+}
+
+.custom6-shape-divider-top-1637887047 .shape-fill {
+    fill:#C977FF;
+}
+
+
+.footer-container ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-container li {
+  padding:10px 10px;
+}
+
+.footer-container ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-container ul a:hover {
+  opacity:1;
+}
+
+.footer-container .social {
+  text-align:center;
+  padding-bottom:15px;
+}
+
+.footer-container .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:5px solid #ccc;
+  margin:50px 8px;
+  color:inherit;
+  opacity:0.75;
+  padding-top:0.25%;
+}
+
+.footer-container .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-container .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:10px;
+}

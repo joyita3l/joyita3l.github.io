@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+	min-height: 100%;
+}
+
+body {
+	min-height: 100vh;
+}
+
+nav{
+	position:fixed;
+	background: #ffffff;
+	height: 120px;
+	display:flex;
+	align-items: center;
+	font-size: 1.1rem;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
+.navbar-container{
+	display: flex;
+	align-items: center;
+	height: 80px;
+	z-index: 1;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 5px 8%;
+}
+
+.menu-img{
+	width:50px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.logo{
+	width:250px;
+	cursor: pointer;
+}
+
+ul{
+	flex: 1;
+	text-align: right;
+}
+
+ul li{
+	display: inline-block;
+	list-style: none;
+	margin: 0 20px;
+}
+
+ul li a{
+	text-decoration: none;
+	color: #000000;
+	
+}
+
+.libros-container{
+	position: relative;
+	text-align: center;
+}
+
+.parallax {
+  /* The image used */
+	background-image: url("images/Libros4-1.png");
+	width:100%;
+  /* Set a specific height */
+	min-height: 100%;
+  /* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.text-container{
+	position: absolute;
+	top: 30%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+.text-container h1{
+	font-size:1.8rem;
+	font-weight:bold;
+	color:#11194D;
+	display:inline;
+}
+
+.text-container h2{
+	font-size:1.3rem;
+	font-weight:bold;
+	color:black;
+	display:inline;
+	line-height: 1;
+	
+}
+
+.text-container a{
+	text-decoration: none;
+	background:#FFFF00;
+	padding: 15px 20px;
+	display: inline-block;
+	color: black;
+	font-size:0.8rem;
+	font-weight:bold;
+	margin-top: 20px;
+	border-radius: 30px;
+}
+
+.elegir-container{
+	position: relative;
+	text-align: center;
+}
+
+
+.parallax2 {
+  /* The image used */
+	background-image: url("images/Libro_mitad_del_mundo4.png");
+	width:100%;
+  /* Set a specific height */
+	min-height: 100%;
+  /* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.elegir-text-container{
+	position: absolute;
+	top: 50%;
+	left:75%;
+	transform: translate(-50%, -50%);
+}
+
+.elegir-text-container h1{
+	font-size:1.8rem;
+	font-weight:bold;
+	color:#11194D;
+	display:inline;
+}
+
+.elegir-text-container p{
+	font-size:1.1rem;
+	font-weight:normal;
+	color:black;
+	line-height: 1.8;
+	
+}
+
+
+.importancia-container{
+	position: relative;
+	text-align: center;
+	min-height:90%;
+
+}
+
+.custom-shape-divider-top-1637887047 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1637887047 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 146px;
+}
+
+.custom-shape-divider-top-1637887047 .shape-fill {
+    fill: #35C7A5;
+}
+
+
+.importancia-text-container{
+	position: absolute;
+	top: 20%;
+	left: 10%;
+	right: 10%;
+}
+
+.importancia-text-container h1{
+	font-size:1.8rem;
+	font-weight:bold;
+	color:#11194D;
+	display:inline;
+}
+
+.importancia-text-container p{
+	font-size:1.1rem;
+	font-weight:normal;
+	color:black;
+	line-height: 1.5;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.importancia-text-container h2{
+	font-size:0.9rem;
+	font-weight:bold;
+	color:black;
+	line-height: 1;
+	text-align: left;
+}
+
+.progress{
+	height:20px;
+	width:100%;
+	background-color:#787E87;
+	position: relative;
+}
+
+.progress .progress-bar{
+	position: absolute;
+	height: 100%;
+	background-color:#1F529F;
+	animation: progress-animation 5s forwards;
+}
+
+@keyframes progress-animation{
+	0% {width: 0%;}
+	100% {width: 80%;}
+}
+
+.importancia-bullets ul{
+	text-align: justify;
+	text-justify: inter-word;
+	font-size:1.1rem;
+}
+
+.importancia-bullets ul li{
+	
+	list-style-Type: none;
+	padding: 0 0 4px 23px;
+	background: url(https:/www.computerhope.com/cdn/arrow.png) no-repeat left center;
+}
+
+
+.libros-vendidos-container{
+	position: relative;
+	text-align: center;
+	min-height:150px;
+}
+
+.barra-libros-vendidos{
+	height:150px;
+	width:100%;
+	background-color:#F6D91B;
+	position: relative;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+}
+
+.column h3{
+	font-size:1.2rem;
+	font-weight:bold;
+	color:black;
+}
+
+.provincias-vendidas img{
+	width:100px;
+	height:100px;
+	position:center;
+}
+
+.instituciones-vendidas img{
+	width:100px;
+	height:100px;
+	position:center;
+}
+
+.ninos-beneficiados img{
+	width:100px;
+	height:100px;
+	position:center;
+}
+
+.counter {
+	font-size: 1rem;
+	margin: 1px 0;
+}
+
+
+.edades-container{
+	position: relative;
+	text-align: center;
+	min-height: 1100px;
+}
+
+.custom2-shape-divider-top-1637887047 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom2-shape-divider-top-1637887047 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 146px;
+}
+
+.custom2-shape-divider-top-1637887047 .shape-fill {
+    fill: #F6D91B;
+}
+
+
+.edades-text-container{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	right: 10%;
+	bottom: 30%;
+}
+
+.edades-text-container h1{
+	font-size:2rem;
+	font-weight:bold;
+	color:#27FDA8;
+	display:inline;
+}
+
+.edades-text-container p{
+	font-size:1.1rem;
+	font-weight:normal;
+	color:black;
+	line-height: 1.5;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.edades-grid-row1 { 
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+	align-items: stretch;
+	justify-items: center;
+	padding-bottom: 20px;
+  }
+.edades-grid-row1 img {
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+	max-width: 100%;
+	cursor: pointer;
+}
+
+.edades-grid-row2 { 
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1%;
+	align-items: stretch;
+	justify-items: center;
+	padding-bottom: 20px;
+  }
+.edades-grid-row2 img {
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+	max-width: 100%;
+	cursor: pointer;
+}
+
+
+.testimoniales-container{
+	position: relative;
+	text-align: center;
+	/*height: 400px;*/
+	min-height: 100%;
+}
+
+
+.testimoniales-carousel {
+	padding: 80px 0;
+	background: url("images/testimonials-cover.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100%;
+}
+
+.testimoniales-carousel::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(14, 16, 17, 0.6);
+}
+
+.testimoniales-carousel .testimonial-CDI {
+	text-align: center;
+	color: #fff;
+}
+
+.testimoniales-carousel .testimonial-CDI .testimonial-img {
+	width: 100px;
+	border-radius: 50%;
+	border: 6px solid rgba(255, 255, 255, 0.15);
+	margin: 0 auto;
+}
+
+.testimoniales-carousel .testimonial-CDI h3 {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 10px 0 5px 0;
+	color: #fff;
+}
+
+.testimoniales-carousel .testimonial-CDI h4 {
+	font-size: 17px;
+	color: #ddd;
+	margin: 10px 0 15px 0;
+}
+
+.testimoniales-carousel .testimonial-CDI p {
+	font-style: italic;
+	font-size: 20px;
+	line-height: 1.5;
+	margin: 70px 10% 15px 10%;
+	color: #eee;
+}
+
+
+.footer-container{
+	position: absolute;
+	height:auto;
+	width:100%;
+}
+
+.custom3-shape-divider-top-1637887047 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom3-shape-divider-top-1637887047 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 146px;
+}
+
+.custom3-shape-divider-top-1637887047 .shape-fill {
+    fill:#FFFFFF;
+}
+
+
+.footer-container ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-container li {
+  padding:10px 10px;
+}
+
+.footer-container ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-container ul a:hover {
+  opacity:1;
+}
+
+.footer-container .social {
+  text-align:center;
+  padding-bottom:15px;
+}
+
+.footer-container .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:5px solid #ccc;
+  margin:50px 8px;
+  color:inherit;
+  opacity:0.75;
+  padding-top:0.25%;
+}
+
+.footer-container .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-container .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:10px;
+}
+
+
+
+/*NOSOTROS -----------------------------------------------------------------*/
+
