@@ -15,60 +15,133 @@ body {
 	min-height: 100vh;
 }
 
-nav{
-	position:fixed;
-	background: #ffffff;
-	height: 120px;
-	display:flex;
-	align-items: center;
-	font-size: 1.1rem;
-	position: sticky;
-	top: 0;
-	z-index: 999;
+.content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+  
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+  background: #FFFFFF;
+  height: 100px;
+}
+.navbar.sticky{
+  background: #FFFFFF;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+}
+.menu-list li a{
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: #007bff;
 }
 
-.navbar-container{
-	display: flex;
-	align-items: center;
-	height: 80px;
-	z-index: 1;
-	width: 100%;
-	max-width: 1300px;
-	margin: 0 auto;
-	padding: 5px 8%;
+
+.icon{
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 868px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #FFFFFF;
+    transition: all 0.3s ease;
+  }
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar .logo a{
+    font-size: 27px;
+  }
 }
 
-.menu-img{
-	width:50px;
-	margin-right: 10px;
-	cursor: pointer;
-}
 
-.logo{
-	width:250px;
-	cursor: pointer;
-}
+/* LIBROS CONTAINER ------------------------------------------------------------------------------------------------------ */
 
-ul{
-	flex: 1;
-	text-align: right;
-}
-
-ul li{
-	display: inline-block;
-	list-style: none;
-	margin: 0 20px;
-}
-
-ul li a{
-	text-decoration: none;
-	color: #000000;
-	
-}
-
-.libros-container{
-	position: relative;
-	text-align: center;
+.inicio.libros-container{
+	position: absolute;
+	height:100%;
+	width:100%;
 }
 
 .parallax {
@@ -87,27 +160,29 @@ ul li a{
 .text-container{
 	position: absolute;
 	top: 30%;
-	left:50%;
-	transform: translate(-50%, -50%);
+	left:25%;
+	text-align:center;
 }
 
-.text-container h1{
+#inicio h1{
 	font-size:1.8rem;
 	font-weight:bold;
 	color:#11194D;
 	display:inline;
+	line-height: 1.2;
+	
 }
 
-.text-container h2{
+#inicio h2{
 	font-size:1.3rem;
 	font-weight:bold;
 	color:black;
 	display:inline;
-	line-height: 1;
+	line-height: 1.2;
 	
 }
 
-.text-container a{
+#inicio a{
 	text-decoration: none;
 	background:#FFFF00;
 	padding: 15px 20px;
@@ -115,19 +190,148 @@ ul li a{
 	color: black;
 	font-size:0.8rem;
 	font-weight:bold;
-	margin-top: 20px;
 	border-radius: 30px;
 }
 
-.elegir-container{
-	position: relative;
-	text-align: center;
+@media screen and (max-width: 600px) {
+  .parallax {
+  /* The image used */
+	background-image: url("images/Libros_telefono.png");
+	width:100%;
+  /* Set a specific height */
+	height: 100%;
+  /* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+	.text-container{
+	position: absolute;
+	top: 40%;
+	left:3%;
+	text-align:center;
+	}
+	
+	.text-container h1{
+	font-size:24px;
+	font-weight:bold;
+	color:#11194D;
+	text-align:center;
+	line-height: 1.5;
+	}
+	
+	.text-container h2{
+	font-size:1.1rem;
+	font-weight:bold;
+	color:black;
+	line-height: 1.1;
+	}
+	
+	.text-container a{
+	text-decoration: none;
+	background:#FFFF00;
+	padding: 15px 20px;
+	display: inline-block;
+	color: black;
+	font-size:0.8rem;
+	font-weight:bold;
+	margin-top:15%;
+	border-radius: 30px;
+	}
 }
 
+/* ELEGIR CONTAINER -------------------------------------------------------------------------------------------- */
+
+.elegir.elegir-container{
+	position: absolute;
+	height:100%;
+	width:100%;
+}
 
 .parallax2 {
   /* The image used */
 	background-image: url("images/Libro_mitad_del_mundo4.png");
+	width:100%;
+  /* Set a specific height */
+	height:100%;
+  /* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.column1 {
+  float: right;
+  width: 50%;
+}
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+
+
+/* Clear floats after the columns */
+.row-container:after {
+  content: "";
+  display: table;
+  clear: both;
+  height:100px;
+}
+
+.elegir-text-container h1{
+	font-size:1.8rem;
+	font-weight:bold;
+	color:#11194D;
+	text-align:center;
+	margin-top:20%;
+	margin-bottom:10%;
+}
+
+.elegir-text-container p{
+	font-size:1.1rem;
+	font-weight:normal;
+	color:black;
+	line-height: 2;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .column1 {
+    width: 100%;
+  }
+  .elegir-text-container{
+	font-size:1rem;
+	font-weight:bold;
+	color:#11194D;
+	display:inline;
+  }
+  .elegir-text-container h1{
+	font-size:1.8rem;
+	font-weight:bold;
+	color:#11194D;
+	text-align:center;
+	margin-top:20%;
+}
+  .elegir-text-container p{
+	font-size:1rem;
+	font-weight:normal;
+	color:black;
+	line-height: 1.8;
+	margin-left:0;
+	margin-right:0;
+	text-align:justify;
+	margin-right:15%;
+	margin-left:15%;
+	}
+	.parallax2 {
+  /* The image used */
+	background-image: url("images/Libro_mitad_del_mundo_instagram.png");
 	width:100%;
   /* Set a specific height */
 	min-height: 100%;
@@ -136,39 +340,17 @@ ul li a{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	}
 }
 
-.elegir-text-container{
+/* IMPORTANCIA CONTAINER ------------------------------------------------------------------------------------------*/
+
+.importancia.importancia-container{
 	position: absolute;
-	top: 50%;
-	left:75%;
-	transform: translate(-50%, -50%);
+	height:100%;
 }
 
-.elegir-text-container h1{
-	font-size:1.8rem;
-	font-weight:bold;
-	color:#11194D;
-	display:inline;
-}
-
-.elegir-text-container p{
-	font-size:1.1rem;
-	font-weight:normal;
-	color:black;
-	line-height: 1.8;
-	
-}
-
-
-.importancia-container{
-	position: relative;
-	text-align: center;
-	min-height:90%;
-
-}
-
-.custom-shape-divider-top-1637887047 {
+.importancia.custom-shape-divider-top-1637887047 {
     position: absolute;
     top: 0;
     left: 0;
@@ -177,7 +359,7 @@ ul li a{
     line-height: 0;
 }
 
-.custom-shape-divider-top-1637887047 svg {
+.importancia.custom-shape-divider-top-1637887047 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
@@ -189,40 +371,44 @@ ul li a{
 }
 
 
-.importancia-text-container{
+.importancia.importancia-text-container{
 	position: absolute;
-	top: 20%;
-	left: 10%;
-	right: 10%;
+	height:auto;
 }
 
-.importancia-text-container h1{
+#importancia h1{
 	font-size:1.8rem;
 	font-weight:bold;
 	color:#11194D;
-	display:inline;
+	text-align:center;
+	padding-bottom:20px;
 }
 
-.importancia-text-container p{
+#importancia p{
 	font-size:1.1rem;
 	font-weight:normal;
 	color:black;
 	line-height: 1.5;
 	text-align: justify;
 	text-justify: inter-word;
+	margin-left:10%;
+	margin-right:10%;
 }
 
-.importancia-text-container h2{
+#importancia h2{
 	font-size:0.9rem;
 	font-weight:bold;
 	color:black;
 	line-height: 1;
-	text-align: left;
+	text-align:left;
+	margin-left:10%;
+	padding-top:10px;
 }
 
 .progress{
 	height:20px;
-	width:100%;
+	margin-left:10%;
+	margin-right:10%;
 	background-color:#787E87;
 	position: relative;
 }
@@ -231,6 +417,7 @@ ul li a{
 	position: absolute;
 	height: 100%;
 	background-color:#1F529F;
+	text-align:center;
 	animation: progress-animation 5s forwards;
 }
 
@@ -239,34 +426,61 @@ ul li a{
 	100% {width: 80%;}
 }
 
+
 .importancia-bullets ul{
 	text-align: justify;
 	text-justify: inter-word;
 	font-size:1.1rem;
+	margin-left:10%;
+	margin-right:10%;
+	padding-bottom:40px;
+
 }
 
 .importancia-bullets ul li{
-	
 	list-style-Type: none;
 	padding: 0 0 4px 23px;
 	background: url(https:/www.computerhope.com/cdn/arrow.png) no-repeat left center;
 }
 
-
-.libros-vendidos-container{
-	position: relative;
-	text-align: center;
-	min-height:150px;
+@media screen and (max-width: 600px) {
+  .importancia p{
+	font-size:1rem;
+	font-weight:normal;
+	color:black;
+	line-height: 1.5;
+	text-align: justify;
+	text-justify: inter-word;
+	margin-left:15%;
+	margin-right:15%;
+	}
+	
+	.importancia h1{
+	font-size:1.8rem;
+	font-weight:bold;
+	color:#11194D;
+	text-align:center;
+	padding-bottom:20px;
+	}
 }
 
-.barra-libros-vendidos{
+
+
+/* LIBROS VENDIDOS -----------------------------------------------------------------------------------*/
+
+.counters.libros-vendidos{
+	position:absolute;
+	height:100%;
+	text-align:center;
+}
+
+.barra-libros{
 	height:150px;
 	width:100%;
 	background-color:#F6D91B;
-	position: relative;
+	text-align:center;
 }
 
-/* Clear floats after the columns */
 .row:after {
 	content: "";
 	display: table;
@@ -307,14 +521,23 @@ ul li a{
 	margin: 1px 0;
 }
 
-
-.edades-container{
-	position: relative;
-	text-align: center;
-	min-height: 1100px;
+@media screen and (max-width: 600px) {
+  .column h3{
+	font-size:0.85rem;
+	font-weight:bold;
+	color:black;
+	}
+	
 }
 
-.custom2-shape-divider-top-1637887047 {
+/* EDADES  CONTAINER ------------------------------------------------------------------------------------------------------------*/
+
+.edades.edades-container{
+	position: absolute;
+	height:100%;
+}
+
+.edades.custom2-shape-divider-top-1637887047 {
     position: absolute;
     top: 0;
     left: 0;
@@ -323,7 +546,7 @@ ul li a{
     line-height: 0;
 }
 
-.custom2-shape-divider-top-1637887047 svg {
+.edades.custom2-shape-divider-top-1637887047 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
@@ -335,28 +558,28 @@ ul li a{
 }
 
 
-.edades-text-container{
+.edades.edades-text-container{
 	position: absolute;
-	top: 10%;
-	left: 10%;
-	right: 10%;
-	bottom: 30%;
+	height:auto;
 }
 
-.edades-text-container h1{
+#edades h1{
 	font-size:2rem;
 	font-weight:bold;
 	color:#27FDA8;
-	display:inline;
+	text-align:center;
 }
 
-.edades-text-container p{
+#edades p{
 	font-size:1.1rem;
 	font-weight:normal;
 	color:black;
 	line-height: 1.5;
 	text-align: justify;
-	text-justify: inter-word;
+	margin-left:15%;
+	margin-right:15%;
+	padding-top:30px;
+	padding-bottom:40px;
 }
 
 .edades-grid-row1 { 
@@ -366,6 +589,8 @@ ul li a{
 	align-items: stretch;
 	justify-items: center;
 	padding-bottom: 20px;
+	margin-left:5%;
+	margin-right:5%;
   }
 .edades-grid-row1 img {
 	border: 1px solid #ccc;
@@ -389,9 +614,28 @@ ul li a{
 	cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+  .edades-grid-row2 img {
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+	max-width: 70%;
+	cursor: pointer;
+	}
+	
+	.edades-grid-row2 { 
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1%;
+	align-items: stretch;
+	padding-bottom: 20px;
+	margin-left:15%;
+	}
+	
+}
+/* TESTIMONIALES------------------------------------------------------------------------------------------------------------- */
 
-.testimoniales-container{
-	position: relative;
+.testimoniales.testimoniales-container{
+	position: absolute;
 	text-align: center;
 	/*height: 400px;*/
 	min-height: 100%;
@@ -451,6 +695,9 @@ ul li a{
 	color: #eee;
 }
 
+	
+
+/* FOOTER ------------------------------------------------------------------------------------------------------------------*/
 
 .footer-container{
 	position: absolute;
@@ -480,16 +727,16 @@ ul li a{
 
 
 .footer-container ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
+	list-style:none;
+	font-size:18px;
+	line-height:1.6;
+	text-align:center;
+	
 }
 
 .footer-container li {
-  padding:10px 10px;
+	padding:10px 10px;
+	display: inline-flex;
 }
 
 .footer-container ul a {
@@ -519,7 +766,6 @@ ul li a{
   margin:50px 8px;
   color:inherit;
   opacity:0.75;
-  padding-top:0.25%;
 }
 
 .footer-container .social > a:hover {
