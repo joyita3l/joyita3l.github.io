@@ -1,3 +1,25 @@
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+	
+	
+
+
+
 const counters = document.querySelectorAll('.counter');
 const speed = 500; // The lower the slower
 
@@ -33,6 +55,7 @@ counters.forEach(counter => {
     loop: true,
 	autoPlayHoverPause: true
 });
+
 
 //SLIDES GUIA METODOLOGICA-----------------------------------------------------------------------------------------
 
@@ -133,5 +156,4 @@ function showSlides3(n3) {
   dots3[slideIndex3-1].className += " active3";
   captionText3.innerHTML = dots3[slideIndex3-1].alt;
 }
-
 
