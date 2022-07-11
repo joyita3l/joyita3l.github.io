@@ -15,66 +15,135 @@ body {
 	min-height: 100vh;
 }
 
-nav{
-	position:fixed;
-	background: #ffffff;
-	height: 120px;
-	display:flex;
-	align-items: center;
-	font-size: 1.1rem;
-	position: sticky;
-	top: 0;
-	z-index: 999;
+.content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+  
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+  background: #FFFFFF;
+  height: 100px;
+}
+.navbar.sticky{
+  background: #FFFFFF;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+}
+.menu-list li a{
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: #007bff;
 }
 
-.navbar-container{
-	display: flex;
-	align-items: center;
-	height: 80px;
-	z-index: 1;
-	width: 100%;
-	max-width: 1300px;
-	margin: 0 auto;
-	padding: 5px 8%;
+
+.icon{
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 868px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #FFFFFF;
+    transition: all 0.3s ease;
+  }
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar .logo a{
+    font-size: 27px;
+  }
 }
 
-.menu-img{
-	width:50px;
-	margin-right: 10px;
-	cursor: pointer;
-}
-
-.logo{
-	width:250px;
-	cursor: pointer;
-}
-
-ul{
-	flex: 1;
-	text-align: right;
-}
-
-ul li{
-	display: inline-block;
-	list-style: none;
-	margin: 0 20px;
-}
-
-ul li a{
-	text-decoration: none;
-	color: #000000;
-	
-}
-
+/* HISTORIA -------------------------------------------------------------------------------------------- */
 .historia.historia-container{
-	position: absolute;
+	position:absolute;
 	height:100%;
-	width:100%;
 }
 
 .custom4-shape-divider-top-1637887047 {
     position: relative;
-    top: 0;
+    top: 100px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -93,9 +162,8 @@ ul li a{
 }
 
 
-.historia.historia-text-container{
-	position: absolute;
-	height:100%;
+.historia-text-container{
+	margin-top:100px;	
 }
 
 #historia h1{
@@ -117,14 +185,22 @@ ul li a{
 	margin-left: 120px;
 }
 
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
-.historia-text-container p{
-	font-size:1rem;
-	margin-right:20px;
-	margin-left:20px;
+  #historia p {
+    position: relative;
+	font-size:1.1rem;
+	font-weight:normal;
+	color:black;
+	line-height: 1.5;
+	text-align: justify;
+	text-justify: inter-word;
+	margin-right: 30px;
+	margin-left: 30px;
   }
 }
 
+/* EQUIPO ----------------------------------------------------------------------------------------------*/
 
 .equipo.equipo-container{
 	position: absolute;
@@ -164,6 +240,7 @@ ul li a{
 	color:#11194D;
 }
 
+
 #equipo p{
 	position: relative;
 	font-size:1.1rem;
@@ -177,7 +254,7 @@ ul li a{
 }
 
 @media screen and (max-width: 600px) {
-.equipo p{
+  #equipo p {
     position: relative;
 	font-size:1.1rem;
 	font-weight:normal;
@@ -189,6 +266,8 @@ ul li a{
 	margin-left: 30px;
   }
 }
+
+
 .nuestro-equipo-text-container{
 	height:auto;
 	max-width: 100%;
@@ -329,14 +408,14 @@ input[type="radio"]{
   }
 }
 
-
+/* FOOTER------------------------------------------------------------------------------------------------------------- */
 .footer-container{
 	position: absolute;
 	height:auto;
 	width:100%;
 }
 
-.custom6-shape-divider-top-1637887047 {
+.custom3-shape-divider-top-1637887047 {
     position: absolute;
     top: 0;
     left: 0;
@@ -345,29 +424,29 @@ input[type="radio"]{
     line-height: 0;
 }
 
-.custom6-shape-divider-top-1637887047 svg {
+.custom3-shape-divider-top-1637887047 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 146px;
 }
 
-.custom6-shape-divider-top-1637887047 .shape-fill {
-    fill:#C977FF;
+.custom3-shape-divider-top-1637887047 .shape-fill {
+    fill:#FFFFFF;
 }
 
 
 .footer-container ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
+	list-style:none;
+	font-size:18px;
+	line-height:1.6;
+	text-align:center;
+	
 }
 
 .footer-container li {
-  padding:10px 10px;
+	padding:10px 10px;
+	display: inline-flex;
 }
 
 .footer-container ul a {
@@ -397,7 +476,6 @@ input[type="radio"]{
   margin:50px 8px;
   color:inherit;
   opacity:0.75;
-  padding-top:0.25%;
 }
 
 .footer-container .social > a:hover {
